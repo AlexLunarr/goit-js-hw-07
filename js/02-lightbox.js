@@ -39,8 +39,9 @@ function preventDef(event) {
 	  if (event.target.nodeName !== "IMG") {
     return;
 	};
+	
 
 
-	var lightbox = new SimpleLightbox('.gallery a', { captionData: 'alt', captionDelay: 250, animationSpeed: 250, });
-
+	var lightbox = new SimpleLightbox('.gallery .gallery__item', { captionsData: 'alt', captionDelay: 250, animationSpeed: 250, });
+console.log(lightbox);
 };
