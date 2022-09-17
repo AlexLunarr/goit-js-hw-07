@@ -1,20 +1,22 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-// підключаємо бібліотеки
+
+// підключаємо бібліотеки JS
 const basicLightboxJs = document.querySelector("body")
 const before = basicLightboxJs.querySelector("script")
 const script = document.createElement('script');
+
 script.src = 'https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js';
 script.type = 'module'
 
 basicLightboxJs.insertBefore(script, before);
-
+// підключаємо бібліотеки CSS
 
 const basicLightboxCss = document.querySelector("title");
 basicLightboxCss.insertAdjacentHTML('afterend', `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"></link>`);
 
 
-// 
+// виконуємо розмітку
 const gallery = document.querySelector(".gallery");
 
 
@@ -33,7 +35,7 @@ const markup = galleryItems.map((el) =>
  
 gallery.insertAdjacentHTML('beforeend', markup);
 
-// Реализация делегирования на div.gallery и получение url большого изображения.
+// делегування div.gallery отримання url вел. зображення.
 gallery.addEventListener("click", preventDef);
 
 function preventDef(event) {
