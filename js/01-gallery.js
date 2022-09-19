@@ -43,6 +43,7 @@ function preventDef(event) {
 	  if (event.target.nodeName !== "IMG") {
     return;
 	};
+	console.log(event.target.nodeName);
 
 	const selectedImage = event.target.dataset.source;
 
